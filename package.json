@@ -33,14 +33,11 @@
     "lint:fix": "eslint src/**/*.{ts,tsx,js} --fix --no-error-on-unmatched-pattern --max-warnings 10",
     "lint:prettier": "prettier src/**/*.{css,less,scss,md} --write --ignore-unknown",
     "lint": "npm run lint:prettier && npm run lint:fix",
-    "lint:all": "prettier --write . && eslint --fix .",
-    "test:unit": "cross-env CI=true jest",
-    "test:nowatch": "cross-env CI=true jest",
-    "test:ci": "npm run lint && npm run test:nowatch"
+    "lint:all": "prettier --write . && eslint --fix ."
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test:nowatch && lint-staged"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
@@ -86,12 +83,8 @@
     "@babel/preset-env": "^7.13.10",
     "@babel/preset-react": "^7.12.13",
     "@babel/preset-typescript": "^7.13.0",
-    "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.5",
-    "@testing-library/user-event": "^12.8.3",
     "@types/classnames": "^2.2.11",
     "@types/clipboard": "^2.0.1",
-    "@types/jest": "^26.0.20",
     "@types/js-cookie": "^2.2.6",
     "@types/nprogress": "^0.2.0",
     "@types/react": "^17.0.0",
@@ -106,19 +99,16 @@
     "@typescript-eslint/eslint-plugin": "^4.19.0",
     "@typescript-eslint/parser": "^4.19.0",
     "@vitejs/plugin-react-refresh": "^1.1.0",
-    "babel-jest": "^26.6.3",
     "cross-env": "^7.0.3",
     "eslint": "^7.23.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.23.1",
     "husky": "^4.3.6",
-    "jest": "^26.6.3",
     "less": "^4.1.1",
     "lint-staged": "^10.5.3",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
-    "ts-jest": "^26.5.3",
     "ts-node": "^9.1.1",
     "typescript": "^4.1.2",
     "vite": "^2.0.1",
