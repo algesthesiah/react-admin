@@ -1,6 +1,6 @@
 {
   "name": "vite-react-ts-admin",
-  "description": "使用vite2、react17+、typescript搭建后台管理系统脚手架",
+  "description": "使用 vite2、react17+、typescript 搭建后台管理系统脚手架",
   "version": "0.0.0",
   "author": {
     "name": "Visionwuwu",
@@ -24,7 +24,7 @@
   },
   "scripts": {
     "clean": "rimraf ./dist",
-    "dev": "vite --mode development",
+    "dev": "vite --mode production",
     "build:beta": "tsc && vite build --mode beta",
     "build:production": "tsc && vite build --mode production",
     "build-ts": "tsc -p tsconfig.build.json",
@@ -56,6 +56,7 @@
   },
   "dependencies": {
     "@ant-design/charts": "^1.0.20",
+    "@ant-design/icons": "^4.7.0",
     "antd": "^4.12.3",
     "axios": "^0.21.1",
     "classnames": "^2.2.6",

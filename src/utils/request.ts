@@ -6,7 +6,7 @@ import config, {EnvName} from 'root/config'
 
 function dispatchLogout() {
   Modal.confirm({
-    title: '确认登出?',
+    title: '确认登出？',
     content: '你已被登出，可以取消继续留在该页面，或者重新登录',
     okText: '重新登录',
     cancelText: '取消',
@@ -28,9 +28,9 @@ const base = config[MODE]
 const defaultUrl =
   MODE === 'development'
     ? 'http://localhost:5001'
-    : process.env.VITE_APP_API_URL
+    : import.meta.env.VITE_APP_API_URL
 
-// 创建axios的实例
+// 创建 axios 的实例
 const service = axios.create({
   baseURL: base ? base.apiBaseUrl : defaultUrl,
   timeout: 5000,
@@ -56,7 +56,7 @@ service.interceptors.response.use(
 
     if (res.code !== 20000) {
       message.error(res.message || 'Error', 5)
-      // 50008：非法token，50012：其他客户端登录，50014：token失效了
+      // 50008：非法 token，50012：其他客户端登录，50014：token 失效了
       if (res.code === 50008 || res.code === 50012 || res.code === 50014) {
         // 尝试重新登录
         dispatchLogout()
@@ -75,10 +75,10 @@ service.interceptors.response.use(
           error.message = data.message || '错误请求'
           break
         case 401:
-          error.message = data.message || 'token失效，请重新登录'
+          error.message = data.message || 'token 失效，请重新登录'
           break
         case 403:
-          error.message = data.message || '非法token，拒绝访问'
+          error.message = data.message || '非法 token，拒绝访问'
           dispatchLogout()
           break
         case 404:
@@ -103,7 +103,7 @@ service.interceptors.response.use(
   },
 )
 
-/** 封装request请求方法 */
+/** 封装 request 请求方法 */
 function request<T = any>(config: AxiosRequestConfig) {
   return service.request<any, AxiosResponse<T>>(config)
 }

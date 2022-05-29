@@ -17,7 +17,7 @@ const Logo: React.FC<ILogoProps> = props => {
     <div className={classes} style={style}>
       <Link to="/dashboard">
         <img className="sidebar-logo" src={logo} alt="logo" />
-        {showTitle && <h1 className="sidebar-title">橙晨燕</h1>}
+        {showTitle && <h1 className="sidebar-title">react-admin</h1>}
       </Link>
     </div>
   )

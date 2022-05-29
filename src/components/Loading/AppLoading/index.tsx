@@ -12,7 +12,7 @@ const AppLoading: React.FC<IAppLoadingProps> = () => {
       <div className="app-loading-spin-icon">
         <Spin size="large" />
       </div>
-      <h1 className="app-loading-title">橙晨燕</h1>
+      <h1 className="app-loading-title">react-admin</h1>
     </div>
   )
 }

@@ -54,16 +54,6 @@ const menuList: MenuItem[] = [
     status: MenuStatus.enable,
   },
   {
-    id: 2,
-    name: '开发文档',
-    icon: 'FileOutlined',
-    path: '/doc',
-    orderId: 1,
-    parentId: 0,
-    type: MenuType.C,
-    status: MenuStatus.enable,
-  },
-  {
     id: 3,
     name: '权限测试',
     icon: 'LockOutlined',
@@ -84,7 +74,7 @@ const menuList: MenuItem[] = [
   },
   {
     id: 5,
-    name: 'admin页面',
+    name: 'admin 页面',
     path: '/permission/admin',
     orderId: 1,
     parentId: 3,
@@ -93,7 +83,7 @@ const menuList: MenuItem[] = [
   },
   {
     id: 6,
-    name: 'editor页面',
+    name: 'editor 页面',
     path: '/permission/editor',
     orderId: 2,
     parentId: 3,
@@ -102,7 +92,7 @@ const menuList: MenuItem[] = [
   },
   {
     id: 7,
-    name: 'guest页面',
+    name: 'guest 页面',
     path: '/permission/guest',
     orderId: 3,
     parentId: 3,
@@ -176,7 +166,7 @@ const menuList: MenuItem[] = [
   },
   {
     id: 15,
-    name: '菜单1',
+    name: '菜单 1',
     path: '/nested/menu1',
     orderId: 0,
     parentId: 14,
@@ -185,7 +175,7 @@ const menuList: MenuItem[] = [
   },
   {
     id: 16,
-    name: '菜单1-1',
+    name: '菜单 1-1',
     path: '/nested/menu1/menu1-1',
     orderId: 0,
     parentId: 15,
@@ -194,7 +184,7 @@ const menuList: MenuItem[] = [
   },
   {
     id: 17,
-    name: '菜单1-2',
+    name: '菜单 1-2',
     path: '/nested/menu1/menu1-2',
     orderId: 1,
     parentId: 15,
@@ -203,19 +193,10 @@ const menuList: MenuItem[] = [
   },
   {
     id: 18,
-    name: '菜单1-2-1',
+    name: '菜单 1-2-1',
     path: '/nested/menu1/menu1-2/menu1-2-1',
     orderId: 0,
     parentId: 17,
-    type: MenuType.C,
-    status: MenuStatus.enable,
-  },
-  {
-    id: 19,
-    name: '关于作者',
-    path: '/about',
-    orderId: 5,
-    parentId: 0,
     type: MenuType.C,
     status: MenuStatus.enable,
   },
@@ -231,7 +212,7 @@ export default [
       if (!checkPermission(token)) {
         return {
           code: HttpStatusCode.ILLEGAL_UNAUTHORIZED,
-          message: '非法token，获取菜单失效',
+          message: '非法 token，获取菜单失效',
         } as ResponseData
       }
       return {
@@ -250,7 +231,7 @@ export default [
       if (!checkPermission(token)) {
         return {
           code: HttpStatusCode.ILLEGAL_UNAUTHORIZED,
-          message: '非法token，添加菜单失败',
+          message: '非法 token，添加菜单失败',
         } as ResponseData
       }
 
@@ -270,7 +251,7 @@ export default [
       if (!checkPermission(token)) {
         return {
           code: HttpStatusCode.ILLEGAL_UNAUTHORIZED,
-          message: '非法token，更新菜单失败',
+          message: '非法 token，更新菜单失败',
         } as ResponseData
       }
 
@@ -290,7 +271,7 @@ export default [
       if (!checkPermission(token)) {
         return {
           code: HttpStatusCode.ILLEGAL_UNAUTHORIZED,
-          message: '非法token，删除菜单失败',
+          message: '非法 token，删除菜单失败',
         } as ResponseData
       }
 

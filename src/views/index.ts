@@ -1,9 +1,7 @@
 import {lazy} from 'react'
 
-const About = lazy(() => import('./about'))
 const Login = lazy(() => import('./login'))
 const Dashboard = lazy(() => import('./dashboard'))
-const Doc = lazy(() => import('./doc'))
 const Explanation = lazy(() => import('./permission'))
 const Admin = lazy(() => import('./permission/admin'))
 const Editor = lazy(() => import('./permission/editor'))
@@ -22,10 +20,8 @@ const TableCom = lazy(() => import('./component/table'))
 const FormCom = lazy(() => import('./component/form'))
 
 export {
-  About,
   Login,
   Dashboard,
-  Doc,
   Explanation,
   Admin,
   Editor,

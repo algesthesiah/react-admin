@@ -8,7 +8,7 @@ import {
   closeOthersTagView,
 } from 'store/actions'
 import {TagViewProps} from 'store/reducers/tagsView'
-import {useHistory, useLocation} from 'react-router'
+import {useHistory, useLocation} from 'react-router-dom'
 import useClickOutside from 'hooks/useClickOutside'
 import {useAppDispatch, useAppSelector} from 'root/src/store'
 import {bindActionCreators} from 'redux'

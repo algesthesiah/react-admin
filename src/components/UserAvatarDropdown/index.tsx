@@ -14,7 +14,7 @@ function handleLogout() {
   confirm({
     title: '注销',
     icon: <Icon icon="QuestionCircleOutlined" />,
-    content: '确定要退出系统吗?',
+    content: '确定要退出系统吗？',
     cancelText: '取消',
     okText: '确认',
     visible: false,
@@ -30,9 +30,7 @@ const menu = (
       <Link to="/dashboard">首页</Link>
     </Menu.Item>
     <Menu.Item key="project">
-      <a href="https://github.com/visionwuwu/react-antd-admin-visionwu">
-        项目地址
-      </a>
+      <a href="https://github.com/algesthesiah/react-admin">项目地址</a>
     </Menu.Item>
     <Menu.Divider />
     <Menu.Item onClick={handleLogout}>注销</Menu.Item>

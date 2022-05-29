@@ -45,12 +45,6 @@ const MenuList: MenuListProps[] = [
     roles: ['admin', 'editor', 'guest'],
   },
   {
-    path: '/doc',
-    title: '开发文档',
-    icon: 'file',
-    roles: ['admin', 'editor', 'guest'],
-  },
-  {
     path: '/permission',
     title: '权限测试',
     icon: 'lock',
@@ -62,17 +56,17 @@ const MenuList: MenuListProps[] = [
       },
       {
         path: '/permission/admin',
-        title: 'admin页面',
+        title: 'admin 页面',
         roles: ['admin'],
       },
       {
         path: '/permission/editor',
-        title: 'editor页面',
+        title: 'editor 页面',
         roles: ['admin', 'editor'],
       },
       {
         path: '/permission/guest',
-        title: 'guest页面',
+        title: 'guest 页面',
         roles: ['admin', 'guest'],
       },
     ],
@@ -116,22 +110,22 @@ const MenuList: MenuListProps[] = [
     children: [
       {
         path: '/nested/menu1',
-        title: '菜单1',
+        title: '菜单 1',
         roles: ['admin', 'editor'],
         children: [
           {
             path: '/nested/menu1/menu1-1',
-            title: '菜单1-1',
+            title: '菜单 1-1',
             roles: ['admin', 'editor'],
           },
           {
             path: '/nested/menu1/menu1-2',
-            title: '菜单1-2',
+            title: '菜单 1-2',
             roles: ['admin', 'editor'],
             children: [
               {
                 path: '/nested/menu1/menu1-2/menu1-2-1',
-                title: '菜单1-2-1',
+                title: '菜单 1-2-1',
                 roles: ['admin', 'editor'],
               },
             ],
@@ -139,12 +133,6 @@ const MenuList: MenuListProps[] = [
         ],
       },
     ],
-  },
-  {
-    path: '/about',
-    title: '关于作者',
-    icon: 'user',
-    roles: ['admin', 'editor', 'guest'],
   },
 ]
 
@@ -154,11 +142,6 @@ export const commonMenuList: MenuListProps[] = [
     path: '/dashboard',
     title: '首页',
     icon: 'HomeOutlined',
-  },
-  {
-    path: '/doc',
-    title: '文档',
-    icon: 'FileOutlined',
   },
   {
     path: '/account',
@@ -175,11 +158,6 @@ export const commonMenuList: MenuListProps[] = [
       },
     ],
   },
-  {
-    path: '/about',
-    title: '关于作者',
-    icon: 'UserOutlined',
-  },
 ]
 
 export const prevCommonMenuList: MenuListProps[] = [
@@ -187,11 +165,6 @@ export const prevCommonMenuList: MenuListProps[] = [
     path: '/dashboard',
     title: '首页',
     icon: 'HomeOutlined',
-  },
-  {
-    path: '/doc',
-    title: '文档',
-    icon: 'FileOutlined',
   },
 ]
 
@@ -210,11 +183,6 @@ export const nextCommonMenuList: MenuListProps[] = [
         title: '个人设置',
       },
     ],
-  },
-  {
-    path: '/about',
-    title: '关于作者',
-    icon: 'UserOutlined',
   },
 ]
 

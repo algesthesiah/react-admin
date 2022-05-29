@@ -20,7 +20,7 @@ const BoxCard: React.FC<IBoxCardProps> = () => {
       >
         <div style={{position: 'relative'}}>
           <PanThumb image={avatarImg} className="panThumb" />
-          <Mallki className="mallki-text" text="橙晨燕" />
+          <Mallki className="mallki-text" text="react-admin" />
 
           <div className="progress-item" style={{paddingTop: '35px'}}>
             <span>ReactJs</span>

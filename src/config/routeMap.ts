@@ -32,7 +32,7 @@ export interface routeProps {
 }
 
 /**
- * 全局路由，无需嵌套sidebar，header
+ * 全局路由，无需嵌套 sidebar，header
  */
 export const globalRoutes: Array<routeProps> = [
   {
@@ -47,12 +47,6 @@ const routes: Array<routeProps> = [
     path: '/dashboard',
     name: 'Dashboard',
     component: Dashboard,
-    notAuth: true,
-  },
-  {
-    path: '/doc',
-    name: 'Doc',
-    component: Doc,
     notAuth: true,
   },
   {
@@ -131,12 +125,6 @@ const routes: Array<routeProps> = [
     path: '/account/setting',
     name: 'AccountSetting',
     component: AccountSetting,
-    notAuth: true,
-  },
-  {
-    path: '/about',
-    name: 'About',
-    component: About,
     notAuth: true,
   },
   {

@@ -117,30 +117,6 @@ const MenuContainer: React.FC<IMenuProps> = () => {
       style={{height: `calc(100% - ${variables['layout-header-top-h']})`}}
     >
       <Scrollbars autoHide>
-        {/* <Menu
-          mode="inline"
-          theme="dark"
-          key="/dashboard"
-          onSelect={handleMenuSelecte}
-          selectedKeys={[path]}
-          defaultOpenKeys={!sidebarCollapsed ? defaultOpenKeys : []}
-        >
-          <Menu.Item key="/dashboard" icon={<Icon icon="DashboardOutlined" />}>
-            <Link to="/dashboard">首页</Link>
-          </Menu.Item>
-        </Menu>
-        <Menu
-          mode="inline"
-          theme="dark"
-          key="/doc"
-          onSelect={handleMenuSelecte}
-          selectedKeys={[path]}
-          defaultOpenKeys={!sidebarCollapsed ? defaultOpenKeys : []}
-        >
-          <Menu.Item key="/doc" icon={<Icon icon="FileOutlined" />}>
-            <Link to="/doc">文档</Link>
-          </Menu.Item>
-        </Menu> */}
         {menuList.map(item => {
           return (
             <Menu
@@ -155,39 +131,6 @@ const MenuContainer: React.FC<IMenuProps> = () => {
             </Menu>
           )
         })}
-        {/* <Menu
-          mode="inline"
-          theme="dark"
-          key="/account"
-          onSelect={handleMenuSelecte}
-          selectedKeys={[path]}
-          defaultOpenKeys={!sidebarCollapsed ? defaultOpenKeys : []}
-        >
-          <Menu.SubMenu
-            title="个人页"
-            key="/account"
-            icon={<Icon icon="FormOutlined" />}
-          >
-            <Menu.Item key="/account/center">
-              <Link to="/account/center">个人中心</Link>
-            </Menu.Item>
-            <Menu.Item key="/account/setting">
-              <Link to="/account/setting">个人设置</Link>
-            </Menu.Item>
-          </Menu.SubMenu>
-        </Menu>
-        <Menu
-          mode="inline"
-          theme="dark"
-          key="/about"
-          onSelect={handleMenuSelecte}
-          selectedKeys={[path]}
-          defaultOpenKeys={!sidebarCollapsed ? defaultOpenKeys : []}
-        >
-          <Menu.Item key="/about" icon={<Icon icon="UserOutlined" />}>
-            <Link to="/about">关于作者</Link>
-          </Menu.Item>
-        </Menu> */}
       </Scrollbars>
     </div>
   )

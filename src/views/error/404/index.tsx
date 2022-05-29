@@ -1,7 +1,7 @@
 import React, {memo} from 'react'
 import {Row, Col, Button} from 'antd'
 import notFound from 'assets/images/404.png'
-import {useHistory} from 'react-router'
+import {useHistory} from 'react-router-dom'
 import './index.less'
 
 interface INotFoundProps {}
